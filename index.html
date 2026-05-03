@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinaldo Umar - Reformas e Construção</title>
+    <meta name="description"
+        content="Construção, Reformas e Acabamentos com Qualidade e Prazo Garantido. Do alicerce ao acabamento.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#f97316', // orange-500
+                        primaryHover: '#ea580c', // orange-600
+                        secondary: '#1e293b', // slate-800
+                        secondaryHover: '#0f172a', // slate-900
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('https://images.unsplash.com/photo-1541888081622-4a00bc9f3fb7?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animações de ferramentas flutuantes com movimento orgânico */
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(-10px, -25px) rotate(8deg);
+            }
+
+            66% {
+                transform: translate(15px, -10px) rotate(-4deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        @keyframes float-reverse {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(15px, 20px) rotate(-8deg);
+            }
+
+            66% {
+                transform: translate(-10px, 15px) rotate(6deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        .tool-float-1 {
+            animation: float 9s ease-in-out infinite;
+        }
+
+        .tool-float-2 {
+            animation: float-reverse 11s ease-in-out infinite;
+        }
+
+        .tool-float-3 {
+            animation: float 13s ease-in-out infinite;
+        }
+
+        .tool-float-4 {
+            animation: float-reverse 10s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- 1. Header Fixo -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Nome -->
+            <div class="flex items-center gap-2">
+                <i data-lucide="hard-hat" class="text-primary w-8 h-8"></i>
+                <span class="font-bold text-xl text-secondary tracking-tight">Reinaldo Umar <span
+                        class="font-normal text-sm text-gray-500 hidden sm:inline">- Reformas e Construção</span></span>
+            </div>
+            <!-- CTA Direito -->
+            <a href="#contato"
+                class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors shadow-sm hover:shadow">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span class="hidden sm:inline">Orçamento no WhatsApp</span>
+                <span class="sm:hidden">Orçamento</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 2. Hero Section -->
+        <section class="hero-bg text-white py-20 lg:py-32 relative overflow-hidden">
+            <!-- Elementos Decorativos Flutuantes com Profundidade (Depth of Field) -->
+            <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+                <!-- Fundo (menor, muito desfocado, lento) -->
+                <div class="absolute top-1/4 right-1/4 text-white/30 tool-float-4 hidden md:block filter blur-[4px]">
+                    <i data-lucide="pencil-ruler" stroke-width="2.5" class="w-16 h-16 md:w-24 md:h-24"></i>
+                </div>
+
+                <!-- Meio (nítido, tamanho normal) -->
+                <div class="absolute top-1/2 right-4 md:right-16 text-primary/60 tool-float-3">
+                    <i data-lucide="ruler" stroke-width="2"
+                        class="w-24 h-24 md:w-32 md:h-32 transform rotate-45 filter drop-shadow-xl"></i>
+                </div>
+                <div class="absolute bottom-12 right-20 md:bottom-24 md:right-1/3 text-white/50 tool-float-2">
+                    <i data-lucide="hammer" stroke-width="2"
+                        class="w-20 h-20 md:w-28 md:h-28 transform -rotate-12 filter drop-shadow-xl"></i>
+                </div>
+
+                <!-- Frente (maior, levemente desfocado para simular câmera próxima) -->
+                <div
+                    class="absolute top-8 right-8 md:top-16 md:right-24 text-primary/70 tool-float-1 filter blur-[1.5px]">
+                    <i data-lucide="paint-roller" stroke-width="1.5"
+                        class="w-28 h-28 md:w-48 md:h-48 filter drop-shadow-2xl"></i>
+                </div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left md:flex md:items-center relative z-10">
+                <div class="md:w-2/3 lg:w-1/2">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Construção, Reformas e
+                        Acabamentos com Qualidade e Prazo Garantido.</h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">Do alicerce ao acabamento. Evite dores de
+                        cabeça na sua obra com um profissional de confiança.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contato"
+                            class="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Falar no WhatsApp
+                        </a>
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white hover:bg-white hover:text-secondary text-white font-bold py-3 px-6 rounded-lg transition-all">
+                            <i data-lucide="download" class="w-5 h-5"></i>
+                            Baixar Catálogo em PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Seção de Serviços -->
+        <section id="servicos" class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Nossos Serviços</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-default">
+                        <div
+                            class="w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="brick-wall"
+                                class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Alvenaria e Estrutura</h3>
+                        <p class="text-gray-600">Fundações sólidas, levantamento de muros, paredes e estruturas
+                            completas com total segurança.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-default">
+                        <div
+                            class="w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="ruler"
+                                class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Acabamento de Primeira</h3>
+                        <p class="text-gray-600">Instalação de porcelanato, pisos diversos, revestimentos e trabalhos
+                            refinados em gesso.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-default">
+                        <div
+                            class="w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="paint-roller"
+                                class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Pintura Profissional</h3>
+                        <p class="text-gray-600">Pintura interna e externa, aplicação de texturas, massas e acabamentos
+                            com tintas de alta durabilidade.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-default">
+                        <div
+                            class="w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                            <i data-lucide="wrench"
+                                class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Pequenos Reparos</h3>
+                        <p class="text-gray-600">Instalações em geral, elétrica básica, manutenção hidráulica e reparos
+                            rápidos para o dia a dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Seção de Confiança -->
+        <section class="bg-secondary text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
+                    <div
+                        class="flex flex-col items-center p-4 transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-slate-700 p-4 rounded-full mb-4">
+                            <i data-lucide="file-text" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Orçamento Transparente</h3>
+                        <p class="text-slate-300">Sem surpresas no final. Valores e materiais detalhados desde o
+                            primeiro contato.</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center p-4 pt-8 md:pt-4 transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-slate-700 p-4 rounded-full mb-4">
+                            <i data-lucide="clock" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Entrega no Prazo</h3>
+                        <p class="text-slate-300">Cronograma seguido à risca para que você planeje sua mudança sem
+                            atrasos.</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center p-4 pt-8 md:pt-4 transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-slate-700 p-4 rounded-full mb-4">
+                            <i data-lucide="sparkles" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Obra Limpa e Organizada</h3>
+                        <p class="text-slate-300">Cuidado com o seu espaço. Limpeza constante para minimizar
+                            transtornos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA Section Bottom -->
+        <section class="bg-gray-50 py-16 border-t border-gray-200">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-secondary mb-6">Pronto para tirar o seu projeto do papel?
+                </h2>
+                <p class="text-gray-600 mb-8">Entre em contato agora mesmo e solicite um orçamento sem compromisso.
+                    Atendimento rápido e personalizado para a sua obra.</p>
+                <a href="#contato"
+                    class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primaryHover text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+                    <i data-lucide="calculator" class="w-6 h-6"></i>
+                    Solicitar Orçamento
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. Footer -->
+    <footer class="bg-secondary text-slate-300 py-12 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="hard-hat" class="text-primary w-7 h-7"></i>
+                        <span class="font-bold text-2xl text-white tracking-tight">Reinaldo Umar</span>
+                    </div>
+                    <p class="mb-6 max-w-sm">Especialista em construções, reformas e acabamentos. Comprometimento com a
+                        qualidade, limpeza e prazos da sua obra.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-700 hover:bg-primary flex items-center justify-center text-white transition-colors"
+                            aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-700 hover:bg-primary flex items-center justify-center text-white transition-colors"
+                            aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contato -->
+                <div class="col-span-1 md:col-span-2" id="contato">
+                    <h4 class="text-white font-bold text-lg mb-4">Informações de Contato</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                            <span>Atendimento em Campo Grande - MS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary shrink-0"></i>
+                            <span class="font-medium text-white">(67) 9 9282-3017</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary shrink-0"></i>
+                            <span>arrudaumar@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div
+                class="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-400">© 2026 Reinaldo Umar Reformas e Construção. Todos os direitos
+                    reservados.
+                </p>
+                <a href="#"
+                    class="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1 group bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full">
+                    Voltar ao topo
+                    <i data-lucide="arrow-up" class="w-4 h-4 group-hover:-translate-y-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
